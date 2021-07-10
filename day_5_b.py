@@ -1,4 +1,4 @@
-""" solution to Day 5b of Advent of Code 2020: https://adventofcode.com/2020/day/1 """
+""" solution to Day 5b of Advent of Code 2020: https://adventofcode.com/2020/day/5 """
 
 def seat_id_calc(seat_id_string):
     """calculate the seat ID of a given seat identifier"""
