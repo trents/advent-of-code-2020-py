@@ -1,11 +1,13 @@
 """ solution to Day 4a of Advent of Code 2020: https://adventofcode.com/2020/day/4 """
 
+import re
+
 def validate_passport(passport):
     """Validates whether input string is valid passport according to rules in problem description"""
-    if "byr" in passport and "iyr" in passport and "eyr" in passport and "hgt" in passport and "hcl" in passport and "ecl" in passport and "pid" in passport:
-        return True
-    else:
-        return False
+    result = False
+    if len(re.findall("byr|iyr|eyr|hgt|hcl|ecl|pid",passport)) == 7:
+        result = True
+    return result
 
 def cleanup(dirty_arr):
     """Munge the data in dirty_arr into a better array"""
@@ -28,7 +30,7 @@ def passport_count(arr):
     clean_arr = cleanup(arr)
     clean_count = 0
     for i in clean_arr:
-        if validate_passport(i):    
+        if validate_passport(i):
             clean_count += 1
     return clean_count
 
