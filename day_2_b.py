@@ -3,7 +3,7 @@
 import re
 
 def funct(arr):
-    """Validates specific characters in substring, XORs them, and increments result if valid"""
+    """Validates characters in substring, XORs them, and increments result if valid"""
     res = 0
     for i in arr:
         test = re.split("[-: ]",i)
